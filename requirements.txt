@@ -1,0 +1,11 @@
+streamlit
+streamlit-folium
+pandas
+numpy
+matplotlib
+plotly
+jieba
+wordcloud
+folium
+scikit-learn
+requests

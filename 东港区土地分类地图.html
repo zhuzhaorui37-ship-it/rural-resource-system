@@ -1,0 +1,2563 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_331fd7a759bc6dffc6cb99e4b20f1252 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_331fd7a759bc6dffc6cb99e4b20f1252" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_331fd7a759bc6dffc6cb99e4b20f1252 = L.map(
+                "map_331fd7a759bc6dffc6cb99e4b20f1252",
+                {
+                    center: [35.426037, 119.462287],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_48924c3e1aaead953358eb72c71f599e = L.tileLayer(
+                "http://webrd02.is.autonavi.com/appmaptile?lang=zh_cn\u0026size=1\u0026scale=1\u0026style=8\u0026x={x}\u0026y={y}\u0026z={z}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "\u9ad8\u5fb7\u5730\u56fe",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_48924c3e1aaead953358eb72c71f599e.addTo(map_331fd7a759bc6dffc6cb99e4b20f1252);
+        
+    
+            var marker_cluster_7f09a96060a9f0549aa49bb9f47576fa = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_96fd723079dc0541e9aefca0d85969cd = L.marker(
+                [35.45495416697595, 119.46671511666025],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_8a4e844c80d22089cc1b6b2a0887f962 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_8b6b49dc834ddaa83fbc9c1cacc9e601 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_0c4cbd63a286759f69a384170cfb1f45 = $(`<div id="html_0c4cbd63a286759f69a384170cfb1f45" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L001</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合旅游</p>             <p><strong>核心特征：</strong>肥力中等、坡度适中、离公路距离适中</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.1（0-1）<br>                坡度：18.8 度<br>                到公路距离：4.46 公里<br>                土地面积：1.3 亩<br>                海拔：785.0 米<br>                灌溉条件：缺失             </p>             <p><strong>发展建议：</strong><br>                1. 休闲体验：农家乐、采摘园、亲子农场（季节性运营）； 2. 生态观光：梯田花海、森林步道、星空露营地（轻资产开发）； 3. 研学教育：自然课堂、农耕体验基地（对接中小学/培训机构）； 落地建议：修建简易停车场和休息区，控制开发强度，保留原生态景观。             </p>         </div>         </div>`)[0];
+                popup_8b6b49dc834ddaa83fbc9c1cacc9e601.setContent(html_0c4cbd63a286759f69a384170cfb1f45);
+            
+        
+
+        marker_96fd723079dc0541e9aefca0d85969cd.bindPopup(popup_8b6b49dc834ddaa83fbc9c1cacc9e601)
+        ;
+
+        
+    
+    
+            marker_96fd723079dc0541e9aefca0d85969cd.bindTooltip(
+                `<div>
+                     L001 - 适合旅游
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_96fd723079dc0541e9aefca0d85969cd.setIcon(icon_8a4e844c80d22089cc1b6b2a0887f962);
+            
+    
+            var marker_7b6aef75db2d8629c0c5a075b6bf2498 = L.marker(
+                [35.43342500003827, 119.49088146524025],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_70740decdacc173fcb07a067290114ed = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_d146fa96d77fed2f35be6f78598da3c4 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_eac2bb1db7412e2500cc23bbabf9f0b2 = $(`<div id="html_eac2bb1db7412e2500cc23bbabf9f0b2" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L002</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合旅游</p>             <p><strong>核心特征：</strong>肥力中等、坡度适中、离公路距离适中</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.29（0-1）<br>                坡度：22.2 度<br>                到公路距离：4.46 公里<br>                土地面积：3.2 亩<br>                海拔：629.0 米<br>                灌溉条件：缺失             </p>             <p><strong>发展建议：</strong><br>                1. 休闲体验：农家乐、采摘园、亲子农场（季节性运营）； 2. 生态观光：梯田花海、森林步道、星空露营地（轻资产开发）； 3. 研学教育：自然课堂、农耕体验基地（对接中小学/培训机构）； 落地建议：修建简易停车场和休息区，控制开发强度，保留原生态景观。             </p>         </div>         </div>`)[0];
+                popup_d146fa96d77fed2f35be6f78598da3c4.setContent(html_eac2bb1db7412e2500cc23bbabf9f0b2);
+            
+        
+
+        marker_7b6aef75db2d8629c0c5a075b6bf2498.bindPopup(popup_d146fa96d77fed2f35be6f78598da3c4)
+        ;
+
+        
+    
+    
+            marker_7b6aef75db2d8629c0c5a075b6bf2498.bindTooltip(
+                `<div>
+                     L002 - 适合旅游
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7b6aef75db2d8629c0c5a075b6bf2498.setIcon(icon_70740decdacc173fcb07a067290114ed);
+            
+    
+            var marker_9d3d042e9bd7f8f83bc3e233054d6119 = L.marker(
+                [35.44701322051344, 119.48822359945653],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_af57c9c8281d28767bae6469d8424908 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "ban",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_8c0ca1ccb5822328e4945827f3253577 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_543bbe184ad6730e53235595a74c03f6 = $(`<div id="html_543bbe184ad6730e53235595a74c03f6" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L003</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>没法开发</p>             <p><strong>核心特征：</strong>肥力极低、坡度极陡/过平、离公路过远</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.52（0-1）<br>                坡度：12.7 度<br>                到公路距离：2.51 公里<br>                土地面积：1.8 亩<br>                海拔：573.0 米<br>                灌溉条件：缺失             </p>             <p><strong>发展建议：</strong><br>                1. 生态修复：种植固土植被（如柠条、沙棘），治理水土流失； 2. 保护性利用：设为野生植物/动物栖息地，禁止开荒或工程建设； 3. 政策对接：申报生态保护地块，获取政府生态补贴； 落地建议：定期监测土壤和植被状态，仅开展低干扰的生态维护工作。             </p>         </div>         </div>`)[0];
+                popup_8c0ca1ccb5822328e4945827f3253577.setContent(html_543bbe184ad6730e53235595a74c03f6);
+            
+        
+
+        marker_9d3d042e9bd7f8f83bc3e233054d6119.bindPopup(popup_8c0ca1ccb5822328e4945827f3253577)
+        ;
+
+        
+    
+    
+            marker_9d3d042e9bd7f8f83bc3e233054d6119.bindTooltip(
+                `<div>
+                     L003 - 没法开发
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9d3d042e9bd7f8f83bc3e233054d6119.setIcon(icon_af57c9c8281d28767bae6469d8424908);
+            
+    
+            var marker_a2823f52fb761b17bc999f2b7445db04 = L.marker(
+                [35.44729142982926, 119.44147686018194],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_63a28ae1c9ff334a38c978ee7c51ab81 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_58996b4d6bcff21e2b0448173230f919 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_aadd650f089938356b23c141426bc939 = $(`<div id="html_aadd650f089938356b23c141426bc939" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L004</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合种地</p>             <p><strong>核心特征：</strong>土壤肥力高、坡度小、离公路近</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.91（0-1）<br>                坡度：5.1 度<br>                到公路距离：1.01 公里<br>                土地面积：4.5 亩<br>                海拔：744.0 米<br>                灌溉条件：一般             </p>             <p><strong>发展建议：</strong><br>                1. 粮食作物：小麦、水稻、玉米（规模化机械化种植）； 2. 经济作物：大棚蔬菜、草莓、蓝莓（高收益果蔬）； 3. 特色种植：有机杂粮、中药材（绿色认证溢价）； 落地建议：配套滴灌系统，对接本地农贸市场/社区团购，利用公路优势降低运输成本。             </p>         </div>         </div>`)[0];
+                popup_58996b4d6bcff21e2b0448173230f919.setContent(html_aadd650f089938356b23c141426bc939);
+            
+        
+
+        marker_a2823f52fb761b17bc999f2b7445db04.bindPopup(popup_58996b4d6bcff21e2b0448173230f919)
+        ;
+
+        
+    
+    
+            marker_a2823f52fb761b17bc999f2b7445db04.bindTooltip(
+                `<div>
+                     L004 - 适合种地
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a2823f52fb761b17bc999f2b7445db04.setIcon(icon_63a28ae1c9ff334a38c978ee7c51ab81);
+            
+    
+            var marker_2c53b6cdfe275e2fdc27302fbba65ae0 = L.marker(
+                [35.422745578284754, 119.46703758955563],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_220846724417dd224b9f21fe40d52f53 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_93184a84431d2fdd33737c857768c90a = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_bece6dad952f40a03e4927ab3d8c9425 = $(`<div id="html_bece6dad952f40a03e4927ab3d8c9425" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L005</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合旅游</p>             <p><strong>核心特征：</strong>肥力中等、坡度适中、离公路距离适中</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.11（0-1）<br>                坡度：19.4 度<br>                到公路距离：3.93 公里<br>                土地面积：4.7 亩<br>                海拔：719.0 米<br>                灌溉条件：缺失             </p>             <p><strong>发展建议：</strong><br>                1. 休闲体验：农家乐、采摘园、亲子农场（季节性运营）； 2. 生态观光：梯田花海、森林步道、星空露营地（轻资产开发）； 3. 研学教育：自然课堂、农耕体验基地（对接中小学/培训机构）； 落地建议：修建简易停车场和休息区，控制开发强度，保留原生态景观。             </p>         </div>         </div>`)[0];
+                popup_93184a84431d2fdd33737c857768c90a.setContent(html_bece6dad952f40a03e4927ab3d8c9425);
+            
+        
+
+        marker_2c53b6cdfe275e2fdc27302fbba65ae0.bindPopup(popup_93184a84431d2fdd33737c857768c90a)
+        ;
+
+        
+    
+    
+            marker_2c53b6cdfe275e2fdc27302fbba65ae0.bindTooltip(
+                `<div>
+                     L005 - 适合旅游
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2c53b6cdfe275e2fdc27302fbba65ae0.setIcon(icon_220846724417dd224b9f21fe40d52f53);
+            
+    
+            var marker_ce645edbf1b62d2a4507590a65adf719 = L.marker(
+                [35.42325572332553, 119.43409853578294],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_6cb634d4469d5a391b71f0977640dc10 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "ban",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_be29b6bbc64ed7325df58f103b61be9b = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_662b8d8db2d1b8e587405f61f567b505 = $(`<div id="html_662b8d8db2d1b8e587405f61f567b505" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L006</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>没法开发</p>             <p><strong>核心特征：</strong>肥力极低、坡度极陡/过平、离公路过远</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.48（0-1）<br>                坡度：14.9 度<br>                到公路距离：2.39 公里<br>                土地面积：3.9 亩<br>                海拔：749.0 米<br>                灌溉条件：缺失             </p>             <p><strong>发展建议：</strong><br>                1. 生态修复：种植固土植被（如柠条、沙棘），治理水土流失； 2. 保护性利用：设为野生植物/动物栖息地，禁止开荒或工程建设； 3. 政策对接：申报生态保护地块，获取政府生态补贴； 落地建议：定期监测土壤和植被状态，仅开展低干扰的生态维护工作。             </p>         </div>         </div>`)[0];
+                popup_be29b6bbc64ed7325df58f103b61be9b.setContent(html_662b8d8db2d1b8e587405f61f567b505);
+            
+        
+
+        marker_ce645edbf1b62d2a4507590a65adf719.bindPopup(popup_be29b6bbc64ed7325df58f103b61be9b)
+        ;
+
+        
+    
+    
+            marker_ce645edbf1b62d2a4507590a65adf719.bindTooltip(
+                `<div>
+                     L006 - 没法开发
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ce645edbf1b62d2a4507590a65adf719.setIcon(icon_6cb634d4469d5a391b71f0977640dc10);
+            
+    
+            var marker_aa4e366c2d18ebfe7d380a29361955a5 = L.marker(
+                [35.45114003772413, 119.47652690924167],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_a138f2bbf0689d67e0c716b61a156d7f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "ban",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_7fa7dcd9d85205b95b97f7a04967d05c = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_1480abf237e84cf229e38e82b023a456 = $(`<div id="html_1480abf237e84cf229e38e82b023a456" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L007</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>没法开发</p>             <p><strong>核心特征：</strong>肥力极低、坡度极陡/过平、离公路过远</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.65（0-1）<br>                坡度：13.4 度<br>                到公路距离：3.47 公里<br>                土地面积：1.1 亩<br>                海拔：702.0 米<br>                灌溉条件：完善             </p>             <p><strong>发展建议：</strong><br>                1. 生态修复：种植固土植被（如柠条、沙棘），治理水土流失； 2. 保护性利用：设为野生植物/动物栖息地，禁止开荒或工程建设； 3. 政策对接：申报生态保护地块，获取政府生态补贴； 落地建议：定期监测土壤和植被状态，仅开展低干扰的生态维护工作。             </p>         </div>         </div>`)[0];
+                popup_7fa7dcd9d85205b95b97f7a04967d05c.setContent(html_1480abf237e84cf229e38e82b023a456);
+            
+        
+
+        marker_aa4e366c2d18ebfe7d380a29361955a5.bindPopup(popup_7fa7dcd9d85205b95b97f7a04967d05c)
+        ;
+
+        
+    
+    
+            marker_aa4e366c2d18ebfe7d380a29361955a5.bindTooltip(
+                `<div>
+                     L007 - 没法开发
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_aa4e366c2d18ebfe7d380a29361955a5.setIcon(icon_a138f2bbf0689d67e0c716b61a156d7f);
+            
+    
+            var marker_d8d4a5bd0fcfd12373be76b2213b2a63 = L.marker(
+                [35.42192816492544, 119.4751367998214],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_e756454da473bb0851fccfe4431944c0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_0087bea4ba8b67d4e2a9fa774edbc602 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_cc462b4b1258b367b2661c2a39f308f3 = $(`<div id="html_cc462b4b1258b367b2661c2a39f308f3" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L008</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合旅游</p>             <p><strong>核心特征：</strong>肥力中等、坡度适中、离公路距离适中</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.13（0-1）<br>                坡度：27.7 度<br>                到公路距离：4.01 公里<br>                土地面积：1.7 亩<br>                海拔：573.0 米<br>                灌溉条件：缺失             </p>             <p><strong>发展建议：</strong><br>                1. 休闲体验：农家乐、采摘园、亲子农场（季节性运营）； 2. 生态观光：梯田花海、森林步道、星空露营地（轻资产开发）； 3. 研学教育：自然课堂、农耕体验基地（对接中小学/培训机构）； 落地建议：修建简易停车场和休息区，控制开发强度，保留原生态景观。             </p>         </div>         </div>`)[0];
+                popup_0087bea4ba8b67d4e2a9fa774edbc602.setContent(html_cc462b4b1258b367b2661c2a39f308f3);
+            
+        
+
+        marker_d8d4a5bd0fcfd12373be76b2213b2a63.bindPopup(popup_0087bea4ba8b67d4e2a9fa774edbc602)
+        ;
+
+        
+    
+    
+            marker_d8d4a5bd0fcfd12373be76b2213b2a63.bindTooltip(
+                `<div>
+                     L008 - 适合旅游
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d8d4a5bd0fcfd12373be76b2213b2a63.setIcon(icon_e756454da473bb0851fccfe4431944c0);
+            
+    
+            var marker_1e59030daab6254f1184ced9613fa35f = L.marker(
+                [35.43487530274318, 119.48071828593659],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_e97346585a376aaec66a0e738006f3c6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_2938c14f6cae3cc537028dccc129e573 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_7d22d2a864ce5504f1e6c44ee0f6afdb = $(`<div id="html_7d22d2a864ce5504f1e6c44ee0f6afdb" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L009</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合种地</p>             <p><strong>核心特征：</strong>土壤肥力高、坡度小、离公路近</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.85（0-1）<br>                坡度：3.9 度<br>                到公路距离：0.84 公里<br>                土地面积：4.4 亩<br>                海拔：606.0 米<br>                灌溉条件：缺失             </p>             <p><strong>发展建议：</strong><br>                1. 粮食作物：小麦、水稻、玉米（规模化机械化种植）； 2. 经济作物：大棚蔬菜、草莓、蓝莓（高收益果蔬）； 3. 特色种植：有机杂粮、中药材（绿色认证溢价）； 落地建议：配套滴灌系统，对接本地农贸市场/社区团购，利用公路优势降低运输成本。             </p>         </div>         </div>`)[0];
+                popup_2938c14f6cae3cc537028dccc129e573.setContent(html_7d22d2a864ce5504f1e6c44ee0f6afdb);
+            
+        
+
+        marker_1e59030daab6254f1184ced9613fa35f.bindPopup(popup_2938c14f6cae3cc537028dccc129e573)
+        ;
+
+        
+    
+    
+            marker_1e59030daab6254f1184ced9613fa35f.bindTooltip(
+                `<div>
+                     L009 - 适合种地
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1e59030daab6254f1184ced9613fa35f.setIcon(icon_e97346585a376aaec66a0e738006f3c6);
+            
+    
+            var marker_2e7ff0822686299715a4ee528fb386f3 = L.marker(
+                [35.40231808521155, 119.449313465896],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_9d1254ca4a6ad12a9bc87b5a54c5e827 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_3e4a61b9c5978553bb158c1a37b1ceec = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_bc32b3940d46a4d7c99583e707190e8a = $(`<div id="html_bc32b3940d46a4d7c99583e707190e8a" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L010</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合种地</p>             <p><strong>核心特征：</strong>土壤肥力高、坡度小、离公路近</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.85（0-1）<br>                坡度：6.4 度<br>                到公路距离：0.79 公里<br>                土地面积：1.7 亩<br>                海拔：528.0 米<br>                灌溉条件：缺失             </p>             <p><strong>发展建议：</strong><br>                1. 粮食作物：小麦、水稻、玉米（规模化机械化种植）； 2. 经济作物：大棚蔬菜、草莓、蓝莓（高收益果蔬）； 3. 特色种植：有机杂粮、中药材（绿色认证溢价）； 落地建议：配套滴灌系统，对接本地农贸市场/社区团购，利用公路优势降低运输成本。             </p>         </div>         </div>`)[0];
+                popup_3e4a61b9c5978553bb158c1a37b1ceec.setContent(html_bc32b3940d46a4d7c99583e707190e8a);
+            
+        
+
+        marker_2e7ff0822686299715a4ee528fb386f3.bindPopup(popup_3e4a61b9c5978553bb158c1a37b1ceec)
+        ;
+
+        
+    
+    
+            marker_2e7ff0822686299715a4ee528fb386f3.bindTooltip(
+                `<div>
+                     L010 - 适合种地
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2e7ff0822686299715a4ee528fb386f3.setIcon(icon_9d1254ca4a6ad12a9bc87b5a54c5e827);
+            
+    
+            var marker_9bca3cf0d30e2e6093166efec44172ed = L.marker(
+                [35.43905246107661, 119.472140261791],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_438adf7018273d21f660bcda4cbbf0de = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "ban",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_ea7c2caff61c7bd20b05cbdf65c0a54c = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_e9aff60918de33484d97eef490522890 = $(`<div id="html_e9aff60918de33484d97eef490522890" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L011</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>没法开发</p>             <p><strong>核心特征：</strong>肥力极低、坡度极陡/过平、离公路过远</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.59（0-1）<br>                坡度：15.2 度<br>                到公路距离：2.54 公里<br>                土地面积：2.0 亩<br>                海拔：790.0 米<br>                灌溉条件：缺失             </p>             <p><strong>发展建议：</strong><br>                1. 生态修复：种植固土植被（如柠条、沙棘），治理水土流失； 2. 保护性利用：设为野生植物/动物栖息地，禁止开荒或工程建设； 3. 政策对接：申报生态保护地块，获取政府生态补贴； 落地建议：定期监测土壤和植被状态，仅开展低干扰的生态维护工作。             </p>         </div>         </div>`)[0];
+                popup_ea7c2caff61c7bd20b05cbdf65c0a54c.setContent(html_e9aff60918de33484d97eef490522890);
+            
+        
+
+        marker_9bca3cf0d30e2e6093166efec44172ed.bindPopup(popup_ea7c2caff61c7bd20b05cbdf65c0a54c)
+        ;
+
+        
+    
+    
+            marker_9bca3cf0d30e2e6093166efec44172ed.bindTooltip(
+                `<div>
+                     L011 - 没法开发
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9bca3cf0d30e2e6093166efec44172ed.setIcon(icon_438adf7018273d21f660bcda4cbbf0de);
+            
+    
+            var marker_4b6fe58e9ee8db3bbea4e9dadeae78f2 = L.marker(
+                [35.453663606032926, 119.43433863537115],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_dc0a1c57dde7348523fa9c5c0cb33bba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_acb15a778c77924b8b0ca276be862944 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_cccf67dda2654345f59a73ef299e3469 = $(`<div id="html_cccf67dda2654345f59a73ef299e3469" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L012</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合旅游</p>             <p><strong>核心特征：</strong>肥力中等、坡度适中、离公路距离适中</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.23（0-1）<br>                坡度：22.7 度<br>                到公路距离：4.06 公里<br>                土地面积：4.0 亩<br>                海拔：657.0 米<br>                灌溉条件：缺失             </p>             <p><strong>发展建议：</strong><br>                1. 休闲体验：农家乐、采摘园、亲子农场（季节性运营）； 2. 生态观光：梯田花海、森林步道、星空露营地（轻资产开发）； 3. 研学教育：自然课堂、农耕体验基地（对接中小学/培训机构）； 落地建议：修建简易停车场和休息区，控制开发强度，保留原生态景观。             </p>         </div>         </div>`)[0];
+                popup_acb15a778c77924b8b0ca276be862944.setContent(html_cccf67dda2654345f59a73ef299e3469);
+            
+        
+
+        marker_4b6fe58e9ee8db3bbea4e9dadeae78f2.bindPopup(popup_acb15a778c77924b8b0ca276be862944)
+        ;
+
+        
+    
+    
+            marker_4b6fe58e9ee8db3bbea4e9dadeae78f2.bindTooltip(
+                `<div>
+                     L012 - 适合旅游
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4b6fe58e9ee8db3bbea4e9dadeae78f2.setIcon(icon_dc0a1c57dde7348523fa9c5c0cb33bba);
+            
+    
+            var marker_9c34786926e3cfa839b99a92bdb14c24 = L.marker(
+                [35.39925597065633, 119.43423261997724],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_94c223ce932a4423353dab2a4fab2466 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "ban",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_50d956c717f664bd97ac398d6978d59a = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_4c3be08289ac1bfef017e9dbb2d58091 = $(`<div id="html_4c3be08289ac1bfef017e9dbb2d58091" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L013</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>没法开发</p>             <p><strong>核心特征：</strong>肥力极低、坡度极陡/过平、离公路过远</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.46（0-1）<br>                坡度：10.2 度<br>                到公路距离：3.44 公里<br>                土地面积：2.4 亩<br>                海拔：604.0 米<br>                灌溉条件：一般             </p>             <p><strong>发展建议：</strong><br>                1. 生态修复：种植固土植被（如柠条、沙棘），治理水土流失； 2. 保护性利用：设为野生植物/动物栖息地，禁止开荒或工程建设； 3. 政策对接：申报生态保护地块，获取政府生态补贴； 落地建议：定期监测土壤和植被状态，仅开展低干扰的生态维护工作。             </p>         </div>         </div>`)[0];
+                popup_50d956c717f664bd97ac398d6978d59a.setContent(html_4c3be08289ac1bfef017e9dbb2d58091);
+            
+        
+
+        marker_9c34786926e3cfa839b99a92bdb14c24.bindPopup(popup_50d956c717f664bd97ac398d6978d59a)
+        ;
+
+        
+    
+    
+            marker_9c34786926e3cfa839b99a92bdb14c24.bindTooltip(
+                `<div>
+                     L013 - 没法开发
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9c34786926e3cfa839b99a92bdb14c24.setIcon(icon_94c223ce932a4423353dab2a4fab2466);
+            
+    
+            var marker_ef80b813d6e9dc56bb35c0ec1e37f285 = L.marker(
+                [35.43411479138818, 119.43493499896415],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_8ef681d034d8f80d5e733d5a215cfe35 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "ban",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_f658d792ef0935da4b1cfcfae72188f9 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_161cb2b093225185a52a1a5550fbebca = $(`<div id="html_161cb2b093225185a52a1a5550fbebca" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L014</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>没法开发</p>             <p><strong>核心特征：</strong>肥力极低、坡度极陡/过平、离公路过远</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.6（0-1）<br>                坡度：13.9 度<br>                到公路距离：1.68 公里<br>                土地面积：3.0 亩<br>                海拔：738.0 米<br>                灌溉条件：一般             </p>             <p><strong>发展建议：</strong><br>                1. 生态修复：种植固土植被（如柠条、沙棘），治理水土流失； 2. 保护性利用：设为野生植物/动物栖息地，禁止开荒或工程建设； 3. 政策对接：申报生态保护地块，获取政府生态补贴； 落地建议：定期监测土壤和植被状态，仅开展低干扰的生态维护工作。             </p>         </div>         </div>`)[0];
+                popup_f658d792ef0935da4b1cfcfae72188f9.setContent(html_161cb2b093225185a52a1a5550fbebca);
+            
+        
+
+        marker_ef80b813d6e9dc56bb35c0ec1e37f285.bindPopup(popup_f658d792ef0935da4b1cfcfae72188f9)
+        ;
+
+        
+    
+    
+            marker_ef80b813d6e9dc56bb35c0ec1e37f285.bindTooltip(
+                `<div>
+                     L014 - 没法开发
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ef80b813d6e9dc56bb35c0ec1e37f285.setIcon(icon_8ef681d034d8f80d5e733d5a215cfe35);
+            
+    
+            var marker_8d95d8f25285c08312430f3fb0467769 = L.marker(
+                [35.40747258028922, 119.43547536986344],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_9c56bb428d1bfe02a1364fecac68a2e1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_601ec1e5e06d4c0af251b5a190b444ee = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_8ad4d0040a52744adf71a8d5d423186e = $(`<div id="html_8ad4d0040a52744adf71a8d5d423186e" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L015</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合旅游</p>             <p><strong>核心特征：</strong>肥力中等、坡度适中、离公路距离适中</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.34（0-1）<br>                坡度：23.0 度<br>                到公路距离：4.48 公里<br>                土地面积：4.1 亩<br>                海拔：570.0 米<br>                灌溉条件：缺失             </p>             <p><strong>发展建议：</strong><br>                1. 休闲体验：农家乐、采摘园、亲子农场（季节性运营）； 2. 生态观光：梯田花海、森林步道、星空露营地（轻资产开发）； 3. 研学教育：自然课堂、农耕体验基地（对接中小学/培训机构）； 落地建议：修建简易停车场和休息区，控制开发强度，保留原生态景观。             </p>         </div>         </div>`)[0];
+                popup_601ec1e5e06d4c0af251b5a190b444ee.setContent(html_8ad4d0040a52744adf71a8d5d423186e);
+            
+        
+
+        marker_8d95d8f25285c08312430f3fb0467769.bindPopup(popup_601ec1e5e06d4c0af251b5a190b444ee)
+        ;
+
+        
+    
+    
+            marker_8d95d8f25285c08312430f3fb0467769.bindTooltip(
+                `<div>
+                     L015 - 适合旅游
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8d95d8f25285c08312430f3fb0467769.setIcon(icon_9c56bb428d1bfe02a1364fecac68a2e1);
+            
+    
+            var marker_723bffbd840c5c0f66643d0eed852917 = L.marker(
+                [35.41161708031241, 119.46924863400884],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_3fd7dbfe8322ff00e1e53e175eb48f2b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_26a7a209c39afe3e72a9f50e2a54a60e = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_7f17f2a0f8f715fa13d26b100b4c0712 = $(`<div id="html_7f17f2a0f8f715fa13d26b100b4c0712" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L016</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合种地</p>             <p><strong>核心特征：</strong>土壤肥力高、坡度小、离公路近</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.86（0-1）<br>                坡度：7.9 度<br>                到公路距离：1.18 公里<br>                土地面积：4.8 亩<br>                海拔：639.0 米<br>                灌溉条件：完善             </p>             <p><strong>发展建议：</strong><br>                1. 粮食作物：小麦、水稻、玉米（规模化机械化种植）； 2. 经济作物：大棚蔬菜、草莓、蓝莓（高收益果蔬）； 3. 特色种植：有机杂粮、中药材（绿色认证溢价）； 落地建议：配套滴灌系统，对接本地农贸市场/社区团购，利用公路优势降低运输成本。             </p>         </div>         </div>`)[0];
+                popup_26a7a209c39afe3e72a9f50e2a54a60e.setContent(html_7f17f2a0f8f715fa13d26b100b4c0712);
+            
+        
+
+        marker_723bffbd840c5c0f66643d0eed852917.bindPopup(popup_26a7a209c39afe3e72a9f50e2a54a60e)
+        ;
+
+        
+    
+    
+            marker_723bffbd840c5c0f66643d0eed852917.bindTooltip(
+                `<div>
+                     L016 - 适合种地
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_723bffbd840c5c0f66643d0eed852917.setIcon(icon_3fd7dbfe8322ff00e1e53e175eb48f2b);
+            
+    
+            var marker_703c9b3bd42635e657ff791d97378dfc = L.marker(
+                [35.45040649098717, 119.46859857269854],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_b88e8328b98bad18221699e83b2d885f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "ban",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_3658ac27f8e6fa7dc87d6bead429a8fc = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_a1f5d2077c3f47400527ea5a70af5c4c = $(`<div id="html_a1f5d2077c3f47400527ea5a70af5c4c" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L017</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>没法开发</p>             <p><strong>核心特征：</strong>肥力极低、坡度极陡/过平、离公路过远</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.56（0-1）<br>                坡度：9.6 度<br>                到公路距离：2.39 公里<br>                土地面积：0.8 亩<br>                海拔：591.0 米<br>                灌溉条件：一般             </p>             <p><strong>发展建议：</strong><br>                1. 生态修复：种植固土植被（如柠条、沙棘），治理水土流失； 2. 保护性利用：设为野生植物/动物栖息地，禁止开荒或工程建设； 3. 政策对接：申报生态保护地块，获取政府生态补贴； 落地建议：定期监测土壤和植被状态，仅开展低干扰的生态维护工作。             </p>         </div>         </div>`)[0];
+                popup_3658ac27f8e6fa7dc87d6bead429a8fc.setContent(html_a1f5d2077c3f47400527ea5a70af5c4c);
+            
+        
+
+        marker_703c9b3bd42635e657ff791d97378dfc.bindPopup(popup_3658ac27f8e6fa7dc87d6bead429a8fc)
+        ;
+
+        
+    
+    
+            marker_703c9b3bd42635e657ff791d97378dfc.bindTooltip(
+                `<div>
+                     L017 - 没法开发
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_703c9b3bd42635e657ff791d97378dfc.setIcon(icon_b88e8328b98bad18221699e83b2d885f);
+            
+    
+            var marker_f33692bf8c779075b188c295972294fe = L.marker(
+                [35.4321354405396, 119.45831368039956],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_fa56a9e03c1e1f94566da7d47229a40a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "ban",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_ed371018c37d4ae7849f2a5287f0c4fa = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_da3a3ab71d41f9ba58e3c002f52b2faf = $(`<div id="html_da3a3ab71d41f9ba58e3c002f52b2faf" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L018</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>没法开发</p>             <p><strong>核心特征：</strong>肥力极低、坡度极陡/过平、离公路过远</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.49（0-1）<br>                坡度：15.2 度<br>                到公路距离：2.79 公里<br>                土地面积：1.6 亩<br>                海拔：654.0 米<br>                灌溉条件：完善             </p>             <p><strong>发展建议：</strong><br>                1. 生态修复：种植固土植被（如柠条、沙棘），治理水土流失； 2. 保护性利用：设为野生植物/动物栖息地，禁止开荒或工程建设； 3. 政策对接：申报生态保护地块，获取政府生态补贴； 落地建议：定期监测土壤和植被状态，仅开展低干扰的生态维护工作。             </p>         </div>         </div>`)[0];
+                popup_ed371018c37d4ae7849f2a5287f0c4fa.setContent(html_da3a3ab71d41f9ba58e3c002f52b2faf);
+            
+        
+
+        marker_f33692bf8c779075b188c295972294fe.bindPopup(popup_ed371018c37d4ae7849f2a5287f0c4fa)
+        ;
+
+        
+    
+    
+            marker_f33692bf8c779075b188c295972294fe.bindTooltip(
+                `<div>
+                     L018 - 没法开发
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f33692bf8c779075b188c295972294fe.setIcon(icon_fa56a9e03c1e1f94566da7d47229a40a);
+            
+    
+            var marker_e35fa97aaf1379c9264ed49518062e77 = L.marker(
+                [35.40792419759683, 119.4323318709783],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_5ed136abc719dc7f37797c11a96ae2ed = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_669d144c4f5a2962e40dfde80cbd5b09 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_0dea2671d7ebc104c2f6867498410565 = $(`<div id="html_0dea2671d7ebc104c2f6867498410565" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L019</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合种地</p>             <p><strong>核心特征：</strong>土壤肥力高、坡度小、离公路近</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.89（0-1）<br>                坡度：8.0 度<br>                到公路距离：0.43 公里<br>                土地面积：3.6 亩<br>                海拔：673.0 米<br>                灌溉条件：缺失             </p>             <p><strong>发展建议：</strong><br>                1. 粮食作物：小麦、水稻、玉米（规模化机械化种植）； 2. 经济作物：大棚蔬菜、草莓、蓝莓（高收益果蔬）； 3. 特色种植：有机杂粮、中药材（绿色认证溢价）； 落地建议：配套滴灌系统，对接本地农贸市场/社区团购，利用公路优势降低运输成本。             </p>         </div>         </div>`)[0];
+                popup_669d144c4f5a2962e40dfde80cbd5b09.setContent(html_0dea2671d7ebc104c2f6867498410565);
+            
+        
+
+        marker_e35fa97aaf1379c9264ed49518062e77.bindPopup(popup_669d144c4f5a2962e40dfde80cbd5b09)
+        ;
+
+        
+    
+    
+            marker_e35fa97aaf1379c9264ed49518062e77.bindTooltip(
+                `<div>
+                     L019 - 适合种地
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e35fa97aaf1379c9264ed49518062e77.setIcon(icon_5ed136abc719dc7f37797c11a96ae2ed);
+            
+    
+            var marker_246abcb7d392e9fe7c7831f817517253 = L.marker(
+                [35.45077598016774, 119.43959810724233],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_ef2f65482f4b8514502993de2e1cce9f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "ban",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_034233b5a072823042792756e9c4a835 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_7280a05602f4f3f08f1a012d222699e7 = $(`<div id="html_7280a05602f4f3f08f1a012d222699e7" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L020</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>没法开发</p>             <p><strong>核心特征：</strong>肥力极低、坡度极陡/过平、离公路过远</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.48（0-1）<br>                坡度：11.8 度<br>                到公路距离：3.22 公里<br>                土地面积：4.1 亩<br>                海拔：509.0 米<br>                灌溉条件：一般             </p>             <p><strong>发展建议：</strong><br>                1. 生态修复：种植固土植被（如柠条、沙棘），治理水土流失； 2. 保护性利用：设为野生植物/动物栖息地，禁止开荒或工程建设； 3. 政策对接：申报生态保护地块，获取政府生态补贴； 落地建议：定期监测土壤和植被状态，仅开展低干扰的生态维护工作。             </p>         </div>         </div>`)[0];
+                popup_034233b5a072823042792756e9c4a835.setContent(html_7280a05602f4f3f08f1a012d222699e7);
+            
+        
+
+        marker_246abcb7d392e9fe7c7831f817517253.bindPopup(popup_034233b5a072823042792756e9c4a835)
+        ;
+
+        
+    
+    
+            marker_246abcb7d392e9fe7c7831f817517253.bindTooltip(
+                `<div>
+                     L020 - 没法开发
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_246abcb7d392e9fe7c7831f817517253.setIcon(icon_ef2f65482f4b8514502993de2e1cce9f);
+            
+    
+            var marker_82d907d83833e2c4aaf8653c550925f8 = L.marker(
+                [35.40410230782331, 119.49201275342307],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_c2bab505431de0a2e01b38f8cae6d3ec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_89f82669dd4ecd40f4e6cee6258f456f = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_253cb2b0ca1b9d9b256398318de64581 = $(`<div id="html_253cb2b0ca1b9d9b256398318de64581" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L021</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合旅游</p>             <p><strong>核心特征：</strong>肥力中等、坡度适中、离公路距离适中</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.15（0-1）<br>                坡度：21.4 度<br>                到公路距离：4.23 公里<br>                土地面积：3.2 亩<br>                海拔：518.0 米<br>                灌溉条件：一般             </p>             <p><strong>发展建议：</strong><br>                1. 休闲体验：农家乐、采摘园、亲子农场（季节性运营）； 2. 生态观光：梯田花海、森林步道、星空露营地（轻资产开发）； 3. 研学教育：自然课堂、农耕体验基地（对接中小学/培训机构）； 落地建议：修建简易停车场和休息区，控制开发强度，保留原生态景观。             </p>         </div>         </div>`)[0];
+                popup_89f82669dd4ecd40f4e6cee6258f456f.setContent(html_253cb2b0ca1b9d9b256398318de64581);
+            
+        
+
+        marker_82d907d83833e2c4aaf8653c550925f8.bindPopup(popup_89f82669dd4ecd40f4e6cee6258f456f)
+        ;
+
+        
+    
+    
+            marker_82d907d83833e2c4aaf8653c550925f8.bindTooltip(
+                `<div>
+                     L021 - 适合旅游
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_82d907d83833e2c4aaf8653c550925f8.setIcon(icon_c2bab505431de0a2e01b38f8cae6d3ec);
+            
+    
+            var marker_1623abc2257c8feb19442e7c642cb4ab = L.marker(
+                [35.4505145128721, 119.4397116137941],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_b8834e65dc02f883162d07d2606db951 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_81422dffd75a08307f432192e1c2f90e = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_ba27d5d2d2a7a74a967f77ef62d95d17 = $(`<div id="html_ba27d5d2d2a7a74a967f77ef62d95d17" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L022</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合旅游</p>             <p><strong>核心特征：</strong>肥力中等、坡度适中、离公路距离适中</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.19（0-1）<br>                坡度：21.8 度<br>                到公路距离：4.27 公里<br>                土地面积：4.3 亩<br>                海拔：747.0 米<br>                灌溉条件：一般             </p>             <p><strong>发展建议：</strong><br>                1. 休闲体验：农家乐、采摘园、亲子农场（季节性运营）； 2. 生态观光：梯田花海、森林步道、星空露营地（轻资产开发）； 3. 研学教育：自然课堂、农耕体验基地（对接中小学/培训机构）； 落地建议：修建简易停车场和休息区，控制开发强度，保留原生态景观。             </p>         </div>         </div>`)[0];
+                popup_81422dffd75a08307f432192e1c2f90e.setContent(html_ba27d5d2d2a7a74a967f77ef62d95d17);
+            
+        
+
+        marker_1623abc2257c8feb19442e7c642cb4ab.bindPopup(popup_81422dffd75a08307f432192e1c2f90e)
+        ;
+
+        
+    
+    
+            marker_1623abc2257c8feb19442e7c642cb4ab.bindTooltip(
+                `<div>
+                     L022 - 适合旅游
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1623abc2257c8feb19442e7c642cb4ab.setIcon(icon_b8834e65dc02f883162d07d2606db951);
+            
+    
+            var marker_0bb5d2c94c4a723b664e0a0855928039 = L.marker(
+                [35.45532154694787, 119.469388805561],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_1b2bcf642d7e48ce8634a7e6844ff6a1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_a1fa7e8dc22de86f21a82dedb4dbbb1d = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_3c47242dc3ed18df3ea5c379c6377ab4 = $(`<div id="html_3c47242dc3ed18df3ea5c379c6377ab4" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L023</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合旅游</p>             <p><strong>核心特征：</strong>肥力中等、坡度适中、离公路距离适中</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.18（0-1）<br>                坡度：25.5 度<br>                到公路距离：4.8 公里<br>                土地面积：4.2 亩<br>                海拔：755.0 米<br>                灌溉条件：完善             </p>             <p><strong>发展建议：</strong><br>                1. 休闲体验：农家乐、采摘园、亲子农场（季节性运营）； 2. 生态观光：梯田花海、森林步道、星空露营地（轻资产开发）； 3. 研学教育：自然课堂、农耕体验基地（对接中小学/培训机构）； 落地建议：修建简易停车场和休息区，控制开发强度，保留原生态景观。             </p>         </div>         </div>`)[0];
+                popup_a1fa7e8dc22de86f21a82dedb4dbbb1d.setContent(html_3c47242dc3ed18df3ea5c379c6377ab4);
+            
+        
+
+        marker_0bb5d2c94c4a723b664e0a0855928039.bindPopup(popup_a1fa7e8dc22de86f21a82dedb4dbbb1d)
+        ;
+
+        
+    
+    
+            marker_0bb5d2c94c4a723b664e0a0855928039.bindTooltip(
+                `<div>
+                     L023 - 适合旅游
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0bb5d2c94c4a723b664e0a0855928039.setIcon(icon_1b2bcf642d7e48ce8634a7e6844ff6a1);
+            
+    
+            var marker_b00ba832fe55869ed7efb18faaef8dba = L.marker(
+                [35.43916611493303, 119.44590538053954],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_82bf81b2054492319d1c212a4af8311b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "ban",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_b4b2f5b901372e6903e08d107009d3ea = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_7f519beaa023f00cd81064f81060e700 = $(`<div id="html_7f519beaa023f00cd81064f81060e700" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L024</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>没法开发</p>             <p><strong>核心特征：</strong>肥力极低、坡度极陡/过平、离公路过远</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.58（0-1）<br>                坡度：12.2 度<br>                到公路距离：3.24 公里<br>                土地面积：4.7 亩<br>                海拔：578.0 米<br>                灌溉条件：完善             </p>             <p><strong>发展建议：</strong><br>                1. 生态修复：种植固土植被（如柠条、沙棘），治理水土流失； 2. 保护性利用：设为野生植物/动物栖息地，禁止开荒或工程建设； 3. 政策对接：申报生态保护地块，获取政府生态补贴； 落地建议：定期监测土壤和植被状态，仅开展低干扰的生态维护工作。             </p>         </div>         </div>`)[0];
+                popup_b4b2f5b901372e6903e08d107009d3ea.setContent(html_7f519beaa023f00cd81064f81060e700);
+            
+        
+
+        marker_b00ba832fe55869ed7efb18faaef8dba.bindPopup(popup_b4b2f5b901372e6903e08d107009d3ea)
+        ;
+
+        
+    
+    
+            marker_b00ba832fe55869ed7efb18faaef8dba.bindTooltip(
+                `<div>
+                     L024 - 没法开发
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b00ba832fe55869ed7efb18faaef8dba.setIcon(icon_82bf81b2054492319d1c212a4af8311b);
+            
+    
+            var marker_7c8eeff3cfb3c9bc399c255f2931b270 = L.marker(
+                [35.4015360839532, 119.47647312035002],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_8456195ec6b61357f3823eb76e51a89f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_fa406697392ac2b1ca74bc34866b59a5 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_8bf69a41e10096a072008d9c79cc462e = $(`<div id="html_8bf69a41e10096a072008d9c79cc462e" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L025</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合种地</p>             <p><strong>核心特征：</strong>土壤肥力高、坡度小、离公路近</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.84（0-1）<br>                坡度：6.0 度<br>                到公路距离：0.53 公里<br>                土地面积：3.8 亩<br>                海拔：692.0 米<br>                灌溉条件：完善             </p>             <p><strong>发展建议：</strong><br>                1. 粮食作物：小麦、水稻、玉米（规模化机械化种植）； 2. 经济作物：大棚蔬菜、草莓、蓝莓（高收益果蔬）； 3. 特色种植：有机杂粮、中药材（绿色认证溢价）； 落地建议：配套滴灌系统，对接本地农贸市场/社区团购，利用公路优势降低运输成本。             </p>         </div>         </div>`)[0];
+                popup_fa406697392ac2b1ca74bc34866b59a5.setContent(html_8bf69a41e10096a072008d9c79cc462e);
+            
+        
+
+        marker_7c8eeff3cfb3c9bc399c255f2931b270.bindPopup(popup_fa406697392ac2b1ca74bc34866b59a5)
+        ;
+
+        
+    
+    
+            marker_7c8eeff3cfb3c9bc399c255f2931b270.bindTooltip(
+                `<div>
+                     L025 - 适合种地
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7c8eeff3cfb3c9bc399c255f2931b270.setIcon(icon_8456195ec6b61357f3823eb76e51a89f);
+            
+    
+            var marker_218716aa2b3e9f151ef326986edcf220 = L.marker(
+                [35.40921994498039, 119.46286367929788],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_dd35f21ec037de2387950aa3fe3598f0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_92269f7d55d96fe7c32ade771e5e1923 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_61d8c9ba4c6118400d8a7dc5734888aa = $(`<div id="html_61d8c9ba4c6118400d8a7dc5734888aa" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L026</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合种地</p>             <p><strong>核心特征：</strong>土壤肥力高、坡度小、离公路近</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.94（0-1）<br>                坡度：7.3 度<br>                到公路距离：0.33 公里<br>                土地面积：2.2 亩<br>                海拔：638.0 米<br>                灌溉条件：一般             </p>             <p><strong>发展建议：</strong><br>                1. 粮食作物：小麦、水稻、玉米（规模化机械化种植）； 2. 经济作物：大棚蔬菜、草莓、蓝莓（高收益果蔬）； 3. 特色种植：有机杂粮、中药材（绿色认证溢价）； 落地建议：配套滴灌系统，对接本地农贸市场/社区团购，利用公路优势降低运输成本。             </p>         </div>         </div>`)[0];
+                popup_92269f7d55d96fe7c32ade771e5e1923.setContent(html_61d8c9ba4c6118400d8a7dc5734888aa);
+            
+        
+
+        marker_218716aa2b3e9f151ef326986edcf220.bindPopup(popup_92269f7d55d96fe7c32ade771e5e1923)
+        ;
+
+        
+    
+    
+            marker_218716aa2b3e9f151ef326986edcf220.bindTooltip(
+                `<div>
+                     L026 - 适合种地
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_218716aa2b3e9f151ef326986edcf220.setIcon(icon_dd35f21ec037de2387950aa3fe3598f0);
+            
+    
+            var marker_228325f260694a5a809e65f05c80436a = L.marker(
+                [35.44706348821655, 119.45933360957615],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_a7731bf4a0d93716e0760f102be5817a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "ban",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_1999eec187f057f292b041b5ea6eab5a = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_eef543eb1fd8284ce0b074ee85346d18 = $(`<div id="html_eef543eb1fd8284ce0b074ee85346d18" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L027</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>没法开发</p>             <p><strong>核心特征：</strong>肥力极低、坡度极陡/过平、离公路过远</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.42（0-1）<br>                坡度：11.0 度<br>                到公路距离：2.52 公里<br>                土地面积：2.2 亩<br>                海拔：594.0 米<br>                灌溉条件：完善             </p>             <p><strong>发展建议：</strong><br>                1. 生态修复：种植固土植被（如柠条、沙棘），治理水土流失； 2. 保护性利用：设为野生植物/动物栖息地，禁止开荒或工程建设； 3. 政策对接：申报生态保护地块，获取政府生态补贴； 落地建议：定期监测土壤和植被状态，仅开展低干扰的生态维护工作。             </p>         </div>         </div>`)[0];
+                popup_1999eec187f057f292b041b5ea6eab5a.setContent(html_eef543eb1fd8284ce0b074ee85346d18);
+            
+        
+
+        marker_228325f260694a5a809e65f05c80436a.bindPopup(popup_1999eec187f057f292b041b5ea6eab5a)
+        ;
+
+        
+    
+    
+            marker_228325f260694a5a809e65f05c80436a.bindTooltip(
+                `<div>
+                     L027 - 没法开发
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_228325f260694a5a809e65f05c80436a.setIcon(icon_a7731bf4a0d93716e0760f102be5817a);
+            
+    
+            var marker_c63fb0655b0391d9a9a77dceb2123659 = L.marker(
+                [35.39615930136947, 119.45740981224432],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_594bd1746ffbfd6c89d583bdbd901b6e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_fabbc50528d57f0b78306b8dd95c57cb = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_2b20f0263c706f161fc8a47e47892e5d = $(`<div id="html_2b20f0263c706f161fc8a47e47892e5d" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L028</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合旅游</p>             <p><strong>核心特征：</strong>肥力中等、坡度适中、离公路距离适中</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.23（0-1）<br>                坡度：26.9 度<br>                到公路距离：4.72 公里<br>                土地面积：3.1 亩<br>                海拔：510.0 米<br>                灌溉条件：一般             </p>             <p><strong>发展建议：</strong><br>                1. 休闲体验：农家乐、采摘园、亲子农场（季节性运营）； 2. 生态观光：梯田花海、森林步道、星空露营地（轻资产开发）； 3. 研学教育：自然课堂、农耕体验基地（对接中小学/培训机构）； 落地建议：修建简易停车场和休息区，控制开发强度，保留原生态景观。             </p>         </div>         </div>`)[0];
+                popup_fabbc50528d57f0b78306b8dd95c57cb.setContent(html_2b20f0263c706f161fc8a47e47892e5d);
+            
+        
+
+        marker_c63fb0655b0391d9a9a77dceb2123659.bindPopup(popup_fabbc50528d57f0b78306b8dd95c57cb)
+        ;
+
+        
+    
+    
+            marker_c63fb0655b0391d9a9a77dceb2123659.bindTooltip(
+                `<div>
+                     L028 - 适合旅游
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c63fb0655b0391d9a9a77dceb2123659.setIcon(icon_594bd1746ffbfd6c89d583bdbd901b6e);
+            
+    
+            var marker_9242268cb14f0770d0ab8c77fcb2a20b = L.marker(
+                [35.410276573077994, 119.45474713882528],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_28bdb04b23ce7bce40b1b4c340265629 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_af84802d98a5bfe6524958d22da90329 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_23262e26229a5f33ea3b7326b6f548c4 = $(`<div id="html_23262e26229a5f33ea3b7326b6f548c4" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L029</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合种地</p>             <p><strong>核心特征：</strong>土壤肥力高、坡度小、离公路近</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.9（0-1）<br>                坡度：4.5 度<br>                到公路距离：0.49 公里<br>                土地面积：4.2 亩<br>                海拔：531.0 米<br>                灌溉条件：完善             </p>             <p><strong>发展建议：</strong><br>                1. 粮食作物：小麦、水稻、玉米（规模化机械化种植）； 2. 经济作物：大棚蔬菜、草莓、蓝莓（高收益果蔬）； 3. 特色种植：有机杂粮、中药材（绿色认证溢价）； 落地建议：配套滴灌系统，对接本地农贸市场/社区团购，利用公路优势降低运输成本。             </p>         </div>         </div>`)[0];
+                popup_af84802d98a5bfe6524958d22da90329.setContent(html_23262e26229a5f33ea3b7326b6f548c4);
+            
+        
+
+        marker_9242268cb14f0770d0ab8c77fcb2a20b.bindPopup(popup_af84802d98a5bfe6524958d22da90329)
+        ;
+
+        
+    
+    
+            marker_9242268cb14f0770d0ab8c77fcb2a20b.bindTooltip(
+                `<div>
+                     L029 - 适合种地
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9242268cb14f0770d0ab8c77fcb2a20b.setIcon(icon_28bdb04b23ce7bce40b1b4c340265629);
+            
+    
+            var marker_fce324ab992c3cb0ed7f7f036f2e7de9 = L.marker(
+                [35.435123525532745, 119.44081813751727],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_c6ccc4b94c3bdabf8918b0614f1617d9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_8d6ef22e27854c8b191fedc4081b421c = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_ba0b497c34635d1e7deb0c922c5fe708 = $(`<div id="html_ba0b497c34635d1e7deb0c922c5fe708" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L030</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合种地</p>             <p><strong>核心特征：</strong>土壤肥力高、坡度小、离公路近</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.83（0-1）<br>                坡度：3.9 度<br>                到公路距离：0.36 公里<br>                土地面积：1.4 亩<br>                海拔：648.0 米<br>                灌溉条件：完善             </p>             <p><strong>发展建议：</strong><br>                1. 粮食作物：小麦、水稻、玉米（规模化机械化种植）； 2. 经济作物：大棚蔬菜、草莓、蓝莓（高收益果蔬）； 3. 特色种植：有机杂粮、中药材（绿色认证溢价）； 落地建议：配套滴灌系统，对接本地农贸市场/社区团购，利用公路优势降低运输成本。             </p>         </div>         </div>`)[0];
+                popup_8d6ef22e27854c8b191fedc4081b421c.setContent(html_ba0b497c34635d1e7deb0c922c5fe708);
+            
+        
+
+        marker_fce324ab992c3cb0ed7f7f036f2e7de9.bindPopup(popup_8d6ef22e27854c8b191fedc4081b421c)
+        ;
+
+        
+    
+    
+            marker_fce324ab992c3cb0ed7f7f036f2e7de9.bindTooltip(
+                `<div>
+                     L030 - 适合种地
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fce324ab992c3cb0ed7f7f036f2e7de9.setIcon(icon_c6ccc4b94c3bdabf8918b0614f1617d9);
+            
+    
+            var marker_141d631c006835713385a574237ba96a = L.marker(
+                [35.44850921530755, 119.4858473388955],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_00749c8d35fa18594343d5e08afa0043 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_be8f0f589072b5135c8d75b34d7e81d4 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_afd8733683032b86f65fd86c45367b9f = $(`<div id="html_afd8733683032b86f65fd86c45367b9f" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L031</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合种地</p>             <p><strong>核心特征：</strong>土壤肥力高、坡度小、离公路近</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.95（0-1）<br>                坡度：7.6 度<br>                到公路距离：0.9 公里<br>                土地面积：4.5 亩<br>                海拔：752.0 米<br>                灌溉条件：缺失             </p>             <p><strong>发展建议：</strong><br>                1. 粮食作物：小麦、水稻、玉米（规模化机械化种植）； 2. 经济作物：大棚蔬菜、草莓、蓝莓（高收益果蔬）； 3. 特色种植：有机杂粮、中药材（绿色认证溢价）； 落地建议：配套滴灌系统，对接本地农贸市场/社区团购，利用公路优势降低运输成本。             </p>         </div>         </div>`)[0];
+                popup_be8f0f589072b5135c8d75b34d7e81d4.setContent(html_afd8733683032b86f65fd86c45367b9f);
+            
+        
+
+        marker_141d631c006835713385a574237ba96a.bindPopup(popup_be8f0f589072b5135c8d75b34d7e81d4)
+        ;
+
+        
+    
+    
+            marker_141d631c006835713385a574237ba96a.bindTooltip(
+                `<div>
+                     L031 - 适合种地
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_141d631c006835713385a574237ba96a.setIcon(icon_00749c8d35fa18594343d5e08afa0043);
+            
+    
+            var marker_f6927fcd576d6ca3ed7cff033d09656d = L.marker(
+                [35.44798188306346, 119.4487876988326],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_163e18031912d12df3cb9d14723ed93a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "ban",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_edb4871ed41f78a3a0bae927a8cf0bb8 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_dc983345d6d267eddac8616d352eaac0 = $(`<div id="html_dc983345d6d267eddac8616d352eaac0" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L032</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>没法开发</p>             <p><strong>核心特征：</strong>肥力极低、坡度极陡/过平、离公路过远</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.4（0-1）<br>                坡度：9.3 度<br>                到公路距离：2.73 公里<br>                土地面积：2.8 亩<br>                海拔：785.0 米<br>                灌溉条件：缺失             </p>             <p><strong>发展建议：</strong><br>                1. 生态修复：种植固土植被（如柠条、沙棘），治理水土流失； 2. 保护性利用：设为野生植物/动物栖息地，禁止开荒或工程建设； 3. 政策对接：申报生态保护地块，获取政府生态补贴； 落地建议：定期监测土壤和植被状态，仅开展低干扰的生态维护工作。             </p>         </div>         </div>`)[0];
+                popup_edb4871ed41f78a3a0bae927a8cf0bb8.setContent(html_dc983345d6d267eddac8616d352eaac0);
+            
+        
+
+        marker_f6927fcd576d6ca3ed7cff033d09656d.bindPopup(popup_edb4871ed41f78a3a0bae927a8cf0bb8)
+        ;
+
+        
+    
+    
+            marker_f6927fcd576d6ca3ed7cff033d09656d.bindTooltip(
+                `<div>
+                     L032 - 没法开发
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f6927fcd576d6ca3ed7cff033d09656d.setIcon(icon_163e18031912d12df3cb9d14723ed93a);
+            
+    
+            var marker_3dcd31cc6534edf13bccc132b8608765 = L.marker(
+                [35.41659781470518, 119.46248089604455],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_aedbe364b2e74d5c21523b0458dcd98a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_7d27d396b755404263ba64f6cde8de96 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_726fdcf9a985b9af7805c1d062e37927 = $(`<div id="html_726fdcf9a985b9af7805c1d062e37927" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L033</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合旅游</p>             <p><strong>核心特征：</strong>肥力中等、坡度适中、离公路距离适中</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.23（0-1）<br>                坡度：18.7 度<br>                到公路距离：4.23 公里<br>                土地面积：1.3 亩<br>                海拔：625.0 米<br>                灌溉条件：完善             </p>             <p><strong>发展建议：</strong><br>                1. 休闲体验：农家乐、采摘园、亲子农场（季节性运营）； 2. 生态观光：梯田花海、森林步道、星空露营地（轻资产开发）； 3. 研学教育：自然课堂、农耕体验基地（对接中小学/培训机构）； 落地建议：修建简易停车场和休息区，控制开发强度，保留原生态景观。             </p>         </div>         </div>`)[0];
+                popup_7d27d396b755404263ba64f6cde8de96.setContent(html_726fdcf9a985b9af7805c1d062e37927);
+            
+        
+
+        marker_3dcd31cc6534edf13bccc132b8608765.bindPopup(popup_7d27d396b755404263ba64f6cde8de96)
+        ;
+
+        
+    
+    
+            marker_3dcd31cc6534edf13bccc132b8608765.bindTooltip(
+                `<div>
+                     L033 - 适合旅游
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3dcd31cc6534edf13bccc132b8608765.setIcon(icon_aedbe364b2e74d5c21523b0458dcd98a);
+            
+    
+            var marker_903707bfc9a7db52f25720fa2f0d4668 = L.marker(
+                [35.43577681929911, 119.44605245068945],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_cfeeddf05bc3cc33eb175fa079ceaa5e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "ban",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_de0b0bf575d25d9076d5a72b884cbcb6 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_a37a044666d2ec2b87fbd0b107197cb1 = $(`<div id="html_a37a044666d2ec2b87fbd0b107197cb1" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L034</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>没法开发</p>             <p><strong>核心特征：</strong>肥力极低、坡度极陡/过平、离公路过远</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.41（0-1）<br>                坡度：13.8 度<br>                到公路距离：1.96 公里<br>                土地面积：3.4 亩<br>                海拔：713.0 米<br>                灌溉条件：缺失             </p>             <p><strong>发展建议：</strong><br>                1. 生态修复：种植固土植被（如柠条、沙棘），治理水土流失； 2. 保护性利用：设为野生植物/动物栖息地，禁止开荒或工程建设； 3. 政策对接：申报生态保护地块，获取政府生态补贴； 落地建议：定期监测土壤和植被状态，仅开展低干扰的生态维护工作。             </p>         </div>         </div>`)[0];
+                popup_de0b0bf575d25d9076d5a72b884cbcb6.setContent(html_a37a044666d2ec2b87fbd0b107197cb1);
+            
+        
+
+        marker_903707bfc9a7db52f25720fa2f0d4668.bindPopup(popup_de0b0bf575d25d9076d5a72b884cbcb6)
+        ;
+
+        
+    
+    
+            marker_903707bfc9a7db52f25720fa2f0d4668.bindTooltip(
+                `<div>
+                     L034 - 没法开发
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_903707bfc9a7db52f25720fa2f0d4668.setIcon(icon_cfeeddf05bc3cc33eb175fa079ceaa5e);
+            
+    
+            var marker_21066626a2c0f67faa0618db3c963ae7 = L.marker(
+                [35.42908012805507, 119.45876133770332],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_e5f6e70b719511df4eb19320d2035bdf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_fb41767e7149b4fb5467baf66f55d360 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_39511a769385cbbaebe672977f7df55d = $(`<div id="html_39511a769385cbbaebe672977f7df55d" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L035</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合种地</p>             <p><strong>核心特征：</strong>土壤肥力高、坡度小、离公路近</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.89（0-1）<br>                坡度：7.6 度<br>                到公路距离：0.33 公里<br>                土地面积：3.5 亩<br>                海拔：541.0 米<br>                灌溉条件：完善             </p>             <p><strong>发展建议：</strong><br>                1. 粮食作物：小麦、水稻、玉米（规模化机械化种植）； 2. 经济作物：大棚蔬菜、草莓、蓝莓（高收益果蔬）； 3. 特色种植：有机杂粮、中药材（绿色认证溢价）； 落地建议：配套滴灌系统，对接本地农贸市场/社区团购，利用公路优势降低运输成本。             </p>         </div>         </div>`)[0];
+                popup_fb41767e7149b4fb5467baf66f55d360.setContent(html_39511a769385cbbaebe672977f7df55d);
+            
+        
+
+        marker_21066626a2c0f67faa0618db3c963ae7.bindPopup(popup_fb41767e7149b4fb5467baf66f55d360)
+        ;
+
+        
+    
+    
+            marker_21066626a2c0f67faa0618db3c963ae7.bindTooltip(
+                `<div>
+                     L035 - 适合种地
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_21066626a2c0f67faa0618db3c963ae7.setIcon(icon_e5f6e70b719511df4eb19320d2035bdf);
+            
+    
+            var marker_12439d4b5e78a68af290a67936ef1b8e = L.marker(
+                [35.448795775368374, 119.46101939126508],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_fdf8db2a1888d008c13564d7dceed77f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_7a3f956d8406b6813cd2220de04228e2 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_d3e530bcb41c173d3ff273eac70f2cd5 = $(`<div id="html_d3e530bcb41c173d3ff273eac70f2cd5" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L036</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合旅游</p>             <p><strong>核心特征：</strong>肥力中等、坡度适中、离公路距离适中</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.27（0-1）<br>                坡度：23.4 度<br>                到公路距离：4.4 公里<br>                土地面积：0.9 亩<br>                海拔：696.0 米<br>                灌溉条件：完善             </p>             <p><strong>发展建议：</strong><br>                1. 休闲体验：农家乐、采摘园、亲子农场（季节性运营）； 2. 生态观光：梯田花海、森林步道、星空露营地（轻资产开发）； 3. 研学教育：自然课堂、农耕体验基地（对接中小学/培训机构）； 落地建议：修建简易停车场和休息区，控制开发强度，保留原生态景观。             </p>         </div>         </div>`)[0];
+                popup_7a3f956d8406b6813cd2220de04228e2.setContent(html_d3e530bcb41c173d3ff273eac70f2cd5);
+            
+        
+
+        marker_12439d4b5e78a68af290a67936ef1b8e.bindPopup(popup_7a3f956d8406b6813cd2220de04228e2)
+        ;
+
+        
+    
+    
+            marker_12439d4b5e78a68af290a67936ef1b8e.bindTooltip(
+                `<div>
+                     L036 - 适合旅游
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_12439d4b5e78a68af290a67936ef1b8e.setIcon(icon_fdf8db2a1888d008c13564d7dceed77f);
+            
+    
+            var marker_411fd323362e524b8db3b939292cf494 = L.marker(
+                [35.398885621168915, 119.44321068041444],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_0d64f61f92e81a08d871744ef1a4f2d2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_916ed331401a0cd45c49d54e636e335b = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_9d6c43c300bce50b43533334f62348af = $(`<div id="html_9d6c43c300bce50b43533334f62348af" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L037</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合旅游</p>             <p><strong>核心特征：</strong>肥力中等、坡度适中、离公路距离适中</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.27（0-1）<br>                坡度：18.4 度<br>                到公路距离：4.37 公里<br>                土地面积：0.6 亩<br>                海拔：703.0 米<br>                灌溉条件：一般             </p>             <p><strong>发展建议：</strong><br>                1. 休闲体验：农家乐、采摘园、亲子农场（季节性运营）； 2. 生态观光：梯田花海、森林步道、星空露营地（轻资产开发）； 3. 研学教育：自然课堂、农耕体验基地（对接中小学/培训机构）； 落地建议：修建简易停车场和休息区，控制开发强度，保留原生态景观。             </p>         </div>         </div>`)[0];
+                popup_916ed331401a0cd45c49d54e636e335b.setContent(html_9d6c43c300bce50b43533334f62348af);
+            
+        
+
+        marker_411fd323362e524b8db3b939292cf494.bindPopup(popup_916ed331401a0cd45c49d54e636e335b)
+        ;
+
+        
+    
+    
+            marker_411fd323362e524b8db3b939292cf494.bindTooltip(
+                `<div>
+                     L037 - 适合旅游
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_411fd323362e524b8db3b939292cf494.setIcon(icon_0d64f61f92e81a08d871744ef1a4f2d2);
+            
+    
+            var marker_0d249eb71ebc67f4e18e60c01b581f39 = L.marker(
+                [35.4467151486332, 119.48133195417674],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_9166961a5323f3eaab34702b9bcfcb30 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_436e3a92ba03e3b0257566638d5d50da = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_08d692717413779406d66f1096d776d8 = $(`<div id="html_08d692717413779406d66f1096d776d8" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L038</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合旅游</p>             <p><strong>核心特征：</strong>肥力中等、坡度适中、离公路距离适中</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.29（0-1）<br>                坡度：21.4 度<br>                到公路距离：4.16 公里<br>                土地面积：1.1 亩<br>                海拔：571.0 米<br>                灌溉条件：一般             </p>             <p><strong>发展建议：</strong><br>                1. 休闲体验：农家乐、采摘园、亲子农场（季节性运营）； 2. 生态观光：梯田花海、森林步道、星空露营地（轻资产开发）； 3. 研学教育：自然课堂、农耕体验基地（对接中小学/培训机构）； 落地建议：修建简易停车场和休息区，控制开发强度，保留原生态景观。             </p>         </div>         </div>`)[0];
+                popup_436e3a92ba03e3b0257566638d5d50da.setContent(html_08d692717413779406d66f1096d776d8);
+            
+        
+
+        marker_0d249eb71ebc67f4e18e60c01b581f39.bindPopup(popup_436e3a92ba03e3b0257566638d5d50da)
+        ;
+
+        
+    
+    
+            marker_0d249eb71ebc67f4e18e60c01b581f39.bindTooltip(
+                `<div>
+                     L038 - 适合旅游
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0d249eb71ebc67f4e18e60c01b581f39.setIcon(icon_9166961a5323f3eaab34702b9bcfcb30);
+            
+    
+            var marker_1cff573ac8d857e32020248512e17a8e = L.marker(
+                [35.42925697711416, 119.49188607830926],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_eb4e913136513b52a44cd90b30fa2435 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "ban",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_6bb589a815b5a12e644e4ec4e39ed831 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_c0002934947a59d5817d7a54c4766eb1 = $(`<div id="html_c0002934947a59d5817d7a54c4766eb1" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L039</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>没法开发</p>             <p><strong>核心特征：</strong>肥力极低、坡度极陡/过平、离公路过远</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.47（0-1）<br>                坡度：14.5 度<br>                到公路距离：3.18 公里<br>                土地面积：1.6 亩<br>                海拔：599.0 米<br>                灌溉条件：完善             </p>             <p><strong>发展建议：</strong><br>                1. 生态修复：种植固土植被（如柠条、沙棘），治理水土流失； 2. 保护性利用：设为野生植物/动物栖息地，禁止开荒或工程建设； 3. 政策对接：申报生态保护地块，获取政府生态补贴； 落地建议：定期监测土壤和植被状态，仅开展低干扰的生态维护工作。             </p>         </div>         </div>`)[0];
+                popup_6bb589a815b5a12e644e4ec4e39ed831.setContent(html_c0002934947a59d5817d7a54c4766eb1);
+            
+        
+
+        marker_1cff573ac8d857e32020248512e17a8e.bindPopup(popup_6bb589a815b5a12e644e4ec4e39ed831)
+        ;
+
+        
+    
+    
+            marker_1cff573ac8d857e32020248512e17a8e.bindTooltip(
+                `<div>
+                     L039 - 没法开发
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1cff573ac8d857e32020248512e17a8e.setIcon(icon_eb4e913136513b52a44cd90b30fa2435);
+            
+    
+            var marker_6116b98e0d80d0f53c7d9a693911c8b3 = L.marker(
+                [35.414421711768355, 119.48624291593882],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_a5c9d567a4c0d7317c46f07259c0de08 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_d9787f022f0097fb0286606b6db5ca02 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_082fd0496d291526d40b2ca19a6405c4 = $(`<div id="html_082fd0496d291526d40b2ca19a6405c4" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L040</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合种地</p>             <p><strong>核心特征：</strong>土壤肥力高、坡度小、离公路近</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.83（0-1）<br>                坡度：7.3 度<br>                到公路距离：1.12 公里<br>                土地面积：2.2 亩<br>                海拔：514.0 米<br>                灌溉条件：缺失             </p>             <p><strong>发展建议：</strong><br>                1. 粮食作物：小麦、水稻、玉米（规模化机械化种植）； 2. 经济作物：大棚蔬菜、草莓、蓝莓（高收益果蔬）； 3. 特色种植：有机杂粮、中药材（绿色认证溢价）； 落地建议：配套滴灌系统，对接本地农贸市场/社区团购，利用公路优势降低运输成本。             </p>         </div>         </div>`)[0];
+                popup_d9787f022f0097fb0286606b6db5ca02.setContent(html_082fd0496d291526d40b2ca19a6405c4);
+            
+        
+
+        marker_6116b98e0d80d0f53c7d9a693911c8b3.bindPopup(popup_d9787f022f0097fb0286606b6db5ca02)
+        ;
+
+        
+    
+    
+            marker_6116b98e0d80d0f53c7d9a693911c8b3.bindTooltip(
+                `<div>
+                     L040 - 适合种地
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6116b98e0d80d0f53c7d9a693911c8b3.setIcon(icon_a5c9d567a4c0d7317c46f07259c0de08);
+            
+    
+            var marker_abae540b59f53912fe69506c31c8d2ce = L.marker(
+                [35.40351667855906, 119.46662470521487],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_a833ad8e2a78d9000ed3d2d98b23ed94 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "ban",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_ab1c5126ae68958234878f0ee3d897ad = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_773cd0ee174ce92f84d802a64050594d = $(`<div id="html_773cd0ee174ce92f84d802a64050594d" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L041</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>没法开发</p>             <p><strong>核心特征：</strong>肥力极低、坡度极陡/过平、离公路过远</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.55（0-1）<br>                坡度：15.0 度<br>                到公路距离：3.47 公里<br>                土地面积：2.1 亩<br>                海拔：636.0 米<br>                灌溉条件：一般             </p>             <p><strong>发展建议：</strong><br>                1. 生态修复：种植固土植被（如柠条、沙棘），治理水土流失； 2. 保护性利用：设为野生植物/动物栖息地，禁止开荒或工程建设； 3. 政策对接：申报生态保护地块，获取政府生态补贴； 落地建议：定期监测土壤和植被状态，仅开展低干扰的生态维护工作。             </p>         </div>         </div>`)[0];
+                popup_ab1c5126ae68958234878f0ee3d897ad.setContent(html_773cd0ee174ce92f84d802a64050594d);
+            
+        
+
+        marker_abae540b59f53912fe69506c31c8d2ce.bindPopup(popup_ab1c5126ae68958234878f0ee3d897ad)
+        ;
+
+        
+    
+    
+            marker_abae540b59f53912fe69506c31c8d2ce.bindTooltip(
+                `<div>
+                     L041 - 没法开发
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_abae540b59f53912fe69506c31c8d2ce.setIcon(icon_a833ad8e2a78d9000ed3d2d98b23ed94);
+            
+    
+            var marker_e022c06d20375de785f14c9c65d92085 = L.marker(
+                [35.400100760774855, 119.4782339717834],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_10811c52c82a06112ad1eb41c717adef = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_8d53700b363050838b50aa3be51e86dd = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_93322de45ff4934e49de6e041c2443d6 = $(`<div id="html_93322de45ff4934e49de6e041c2443d6" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L042</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合旅游</p>             <p><strong>核心特征：</strong>肥力中等、坡度适中、离公路距离适中</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.2（0-1）<br>                坡度：23.6 度<br>                到公路距离：4.4 公里<br>                土地面积：3.4 亩<br>                海拔：549.0 米<br>                灌溉条件：一般             </p>             <p><strong>发展建议：</strong><br>                1. 休闲体验：农家乐、采摘园、亲子农场（季节性运营）； 2. 生态观光：梯田花海、森林步道、星空露营地（轻资产开发）； 3. 研学教育：自然课堂、农耕体验基地（对接中小学/培训机构）； 落地建议：修建简易停车场和休息区，控制开发强度，保留原生态景观。             </p>         </div>         </div>`)[0];
+                popup_8d53700b363050838b50aa3be51e86dd.setContent(html_93322de45ff4934e49de6e041c2443d6);
+            
+        
+
+        marker_e022c06d20375de785f14c9c65d92085.bindPopup(popup_8d53700b363050838b50aa3be51e86dd)
+        ;
+
+        
+    
+    
+            marker_e022c06d20375de785f14c9c65d92085.bindTooltip(
+                `<div>
+                     L042 - 适合旅游
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e022c06d20375de785f14c9c65d92085.setIcon(icon_10811c52c82a06112ad1eb41c717adef);
+            
+    
+            var marker_17f13c31bd1e40b084556e325d7b35c2 = L.marker(
+                [35.42813937450963, 119.48850240146773],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_4323b8b5def4fc4bc54620b137c46588 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "ban",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_d142f01564df0aa320b9b8859cc8079a = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_13c58b2fd27ae4cd9618e74038107b32 = $(`<div id="html_13c58b2fd27ae4cd9618e74038107b32" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L043</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>没法开发</p>             <p><strong>核心特征：</strong>肥力极低、坡度极陡/过平、离公路过远</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.44（0-1）<br>                坡度：13.7 度<br>                到公路距离：1.69 公里<br>                土地面积：0.6 亩<br>                海拔：679.0 米<br>                灌溉条件：一般             </p>             <p><strong>发展建议：</strong><br>                1. 生态修复：种植固土植被（如柠条、沙棘），治理水土流失； 2. 保护性利用：设为野生植物/动物栖息地，禁止开荒或工程建设； 3. 政策对接：申报生态保护地块，获取政府生态补贴； 落地建议：定期监测土壤和植被状态，仅开展低干扰的生态维护工作。             </p>         </div>         </div>`)[0];
+                popup_d142f01564df0aa320b9b8859cc8079a.setContent(html_13c58b2fd27ae4cd9618e74038107b32);
+            
+        
+
+        marker_17f13c31bd1e40b084556e325d7b35c2.bindPopup(popup_d142f01564df0aa320b9b8859cc8079a)
+        ;
+
+        
+    
+    
+            marker_17f13c31bd1e40b084556e325d7b35c2.bindTooltip(
+                `<div>
+                     L043 - 没法开发
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_17f13c31bd1e40b084556e325d7b35c2.setIcon(icon_4323b8b5def4fc4bc54620b137c46588);
+            
+    
+            var marker_1bd6cd67e567e226bdb4e7309731bc22 = L.marker(
+                [35.44955940426305, 119.43513363382397],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_88139ced3ff2c564f2ca0e9b18793249 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_b440fddfb3725d4566886ebe8fe3829d = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_31acc9a9a6f3d2bbe6cfa3417c862136 = $(`<div id="html_31acc9a9a6f3d2bbe6cfa3417c862136" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L044</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合旅游</p>             <p><strong>核心特征：</strong>肥力中等、坡度适中、离公路距离适中</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.21（0-1）<br>                坡度：26.5 度<br>                到公路距离：4.07 公里<br>                土地面积：3.9 亩<br>                海拔：698.0 米<br>                灌溉条件：一般             </p>             <p><strong>发展建议：</strong><br>                1. 休闲体验：农家乐、采摘园、亲子农场（季节性运营）； 2. 生态观光：梯田花海、森林步道、星空露营地（轻资产开发）； 3. 研学教育：自然课堂、农耕体验基地（对接中小学/培训机构）； 落地建议：修建简易停车场和休息区，控制开发强度，保留原生态景观。             </p>         </div>         </div>`)[0];
+                popup_b440fddfb3725d4566886ebe8fe3829d.setContent(html_31acc9a9a6f3d2bbe6cfa3417c862136);
+            
+        
+
+        marker_1bd6cd67e567e226bdb4e7309731bc22.bindPopup(popup_b440fddfb3725d4566886ebe8fe3829d)
+        ;
+
+        
+    
+    
+            marker_1bd6cd67e567e226bdb4e7309731bc22.bindTooltip(
+                `<div>
+                     L044 - 适合旅游
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1bd6cd67e567e226bdb4e7309731bc22.setIcon(icon_88139ced3ff2c564f2ca0e9b18793249);
+            
+    
+            var marker_f0e29a4bb9a81a2dd2f61eae3e3c2fe2 = L.marker(
+                [35.40012250404053, 119.46778195174694],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_88d08065adc7c716f308bd641eb8b307 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_a2c9b6b95307f677afb0cb46fb551937 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_12de2b978f71d8c8b1cf37bbf6e5fecd = $(`<div id="html_12de2b978f71d8c8b1cf37bbf6e5fecd" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L045</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合种地</p>             <p><strong>核心特征：</strong>土壤肥力高、坡度小、离公路近</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.95（0-1）<br>                坡度：3.1 度<br>                到公路距离：0.58 公里<br>                土地面积：3.7 亩<br>                海拔：718.0 米<br>                灌溉条件：缺失             </p>             <p><strong>发展建议：</strong><br>                1. 粮食作物：小麦、水稻、玉米（规模化机械化种植）； 2. 经济作物：大棚蔬菜、草莓、蓝莓（高收益果蔬）； 3. 特色种植：有机杂粮、中药材（绿色认证溢价）； 落地建议：配套滴灌系统，对接本地农贸市场/社区团购，利用公路优势降低运输成本。             </p>         </div>         </div>`)[0];
+                popup_a2c9b6b95307f677afb0cb46fb551937.setContent(html_12de2b978f71d8c8b1cf37bbf6e5fecd);
+            
+        
+
+        marker_f0e29a4bb9a81a2dd2f61eae3e3c2fe2.bindPopup(popup_a2c9b6b95307f677afb0cb46fb551937)
+        ;
+
+        
+    
+    
+            marker_f0e29a4bb9a81a2dd2f61eae3e3c2fe2.bindTooltip(
+                `<div>
+                     L045 - 适合种地
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f0e29a4bb9a81a2dd2f61eae3e3c2fe2.setIcon(icon_88d08065adc7c716f308bd641eb8b307);
+            
+    
+            var marker_e181bc5484b5e1beb83ab71ebf5fea57 = L.marker(
+                [35.40228410009791, 119.47105326415974],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_2cf04ee75da7d5a8efe412b6d4e062e3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_6f5af8d17fe203abbb68e2ab667c45f5 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_e96f7a453e64b580744b4ee7990475de = $(`<div id="html_e96f7a453e64b580744b4ee7990475de" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L046</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合种地</p>             <p><strong>核心特征：</strong>土壤肥力高、坡度小、离公路近</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.89（0-1）<br>                坡度：3.6 度<br>                到公路距离：0.57 公里<br>                土地面积：1.1 亩<br>                海拔：693.0 米<br>                灌溉条件：完善             </p>             <p><strong>发展建议：</strong><br>                1. 粮食作物：小麦、水稻、玉米（规模化机械化种植）； 2. 经济作物：大棚蔬菜、草莓、蓝莓（高收益果蔬）； 3. 特色种植：有机杂粮、中药材（绿色认证溢价）； 落地建议：配套滴灌系统，对接本地农贸市场/社区团购，利用公路优势降低运输成本。             </p>         </div>         </div>`)[0];
+                popup_6f5af8d17fe203abbb68e2ab667c45f5.setContent(html_e96f7a453e64b580744b4ee7990475de);
+            
+        
+
+        marker_e181bc5484b5e1beb83ab71ebf5fea57.bindPopup(popup_6f5af8d17fe203abbb68e2ab667c45f5)
+        ;
+
+        
+    
+    
+            marker_e181bc5484b5e1beb83ab71ebf5fea57.bindTooltip(
+                `<div>
+                     L046 - 适合种地
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e181bc5484b5e1beb83ab71ebf5fea57.setIcon(icon_2cf04ee75da7d5a8efe412b6d4e062e3);
+            
+    
+            var marker_fda2b0378450a01b654c0b6a6d46ffd8 = L.marker(
+                [35.402889984832015, 119.48320192807721],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_ab7747522040eb32c21389991dda6e53 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_fd6554761060f48635b7099b6332e6a4 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_36b3c034ffa78a397f07335ad69ac6c9 = $(`<div id="html_36b3c034ffa78a397f07335ad69ac6c9" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L047</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合旅游</p>             <p><strong>核心特征：</strong>肥力中等、坡度适中、离公路距离适中</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.16（0-1）<br>                坡度：24.7 度<br>                到公路距离：4.08 公里<br>                土地面积：3.4 亩<br>                海拔：771.0 米<br>                灌溉条件：完善             </p>             <p><strong>发展建议：</strong><br>                1. 休闲体验：农家乐、采摘园、亲子农场（季节性运营）； 2. 生态观光：梯田花海、森林步道、星空露营地（轻资产开发）； 3. 研学教育：自然课堂、农耕体验基地（对接中小学/培训机构）； 落地建议：修建简易停车场和休息区，控制开发强度，保留原生态景观。             </p>         </div>         </div>`)[0];
+                popup_fd6554761060f48635b7099b6332e6a4.setContent(html_36b3c034ffa78a397f07335ad69ac6c9);
+            
+        
+
+        marker_fda2b0378450a01b654c0b6a6d46ffd8.bindPopup(popup_fd6554761060f48635b7099b6332e6a4)
+        ;
+
+        
+    
+    
+            marker_fda2b0378450a01b654c0b6a6d46ffd8.bindTooltip(
+                `<div>
+                     L047 - 适合旅游
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fda2b0378450a01b654c0b6a6d46ffd8.setIcon(icon_ab7747522040eb32c21389991dda6e53);
+            
+    
+            var marker_b843cf9e26ac9d75856fd87a9a977fa2 = L.marker(
+                [35.44187513932177, 119.45528675949615],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_04db894ae96728220c6052d89a90de50 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_5d5cefe097820eaeea715ea0c42b06d1 = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_8a4962f0ee38f0e5982ed06267787fde = $(`<div id="html_8a4962f0ee38f0e5982ed06267787fde" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L048</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合旅游</p>             <p><strong>核心特征：</strong>肥力中等、坡度适中、离公路距离适中</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.28（0-1）<br>                坡度：23.3 度<br>                到公路距离：4.66 公里<br>                土地面积：4.2 亩<br>                海拔：534.0 米<br>                灌溉条件：缺失             </p>             <p><strong>发展建议：</strong><br>                1. 休闲体验：农家乐、采摘园、亲子农场（季节性运营）； 2. 生态观光：梯田花海、森林步道、星空露营地（轻资产开发）； 3. 研学教育：自然课堂、农耕体验基地（对接中小学/培训机构）； 落地建议：修建简易停车场和休息区，控制开发强度，保留原生态景观。             </p>         </div>         </div>`)[0];
+                popup_5d5cefe097820eaeea715ea0c42b06d1.setContent(html_8a4962f0ee38f0e5982ed06267787fde);
+            
+        
+
+        marker_b843cf9e26ac9d75856fd87a9a977fa2.bindPopup(popup_5d5cefe097820eaeea715ea0c42b06d1)
+        ;
+
+        
+    
+    
+            marker_b843cf9e26ac9d75856fd87a9a977fa2.bindTooltip(
+                `<div>
+                     L048 - 适合旅游
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b843cf9e26ac9d75856fd87a9a977fa2.setIcon(icon_04db894ae96728220c6052d89a90de50);
+            
+    
+            var marker_af4fc460fcf4e3c4182542250920593d = L.marker(
+                [35.43634269475235, 119.47739252640308],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_46392b52947a2dc1bc2549505959ddc2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_0d10f25cc1fca082d4e5c7c6d930cefc = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_fba575cddc066751aee1f354c691dc65 = $(`<div id="html_fba575cddc066751aee1f354c691dc65" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L049</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合种地</p>             <p><strong>核心特征：</strong>土壤肥力高、坡度小、离公路近</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.81（0-1）<br>                坡度：5.3 度<br>                到公路距离：1.1 公里<br>                土地面积：2.3 亩<br>                海拔：759.0 米<br>                灌溉条件：缺失             </p>             <p><strong>发展建议：</strong><br>                1. 粮食作物：小麦、水稻、玉米（规模化机械化种植）； 2. 经济作物：大棚蔬菜、草莓、蓝莓（高收益果蔬）； 3. 特色种植：有机杂粮、中药材（绿色认证溢价）； 落地建议：配套滴灌系统，对接本地农贸市场/社区团购，利用公路优势降低运输成本。             </p>         </div>         </div>`)[0];
+                popup_0d10f25cc1fca082d4e5c7c6d930cefc.setContent(html_fba575cddc066751aee1f354c691dc65);
+            
+        
+
+        marker_af4fc460fcf4e3c4182542250920593d.bindPopup(popup_0d10f25cc1fca082d4e5c7c6d930cefc)
+        ;
+
+        
+    
+    
+            marker_af4fc460fcf4e3c4182542250920593d.bindTooltip(
+                `<div>
+                     L049 - 适合种地
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_af4fc460fcf4e3c4182542250920593d.setIcon(icon_46392b52947a2dc1bc2549505959ddc2);
+            
+    
+            var marker_db1d47078f142faf0bb7786a44380c57 = L.marker(
+                [35.4000226345332, 119.48662937674779],
+                {
+}
+            ).addTo(marker_cluster_7f09a96060a9f0549aa49bb9f47576fa);
+        
+    
+            var icon_8a4207b809d62ceb0f4876a014fe4ee5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_0e27929ab78e1a21a149c2f1af614f3b = L.popup({
+  "maxWidth": 500,
+});
+
+        
+            
+                var html_f1f9d5860cb21553b88dcf2ca8a4ce65 = $(`<div id="html_f1f9d5860cb21553b88dcf2ca8a4ce65" style="width: 100.0%; height: 100.0%;">         <div style="font-size:14px; line-height:1.5;">             <h4 style="margin:0; color:#333;">土地ID：L050</h4>             <hr style="margin:5px 0; border:none; border-top:1px solid #eee;">             <p><strong>分类结果：</strong>适合种地</p>             <p><strong>核心特征：</strong>土壤肥力高、坡度小、离公路近</p>             <p><strong>具体属性：</strong><br>                土壤肥力：0.81（0-1）<br>                坡度：5.5 度<br>                到公路距离：1.12 公里<br>                土地面积：4.3 亩<br>                海拔：689.0 米<br>                灌溉条件：缺失             </p>             <p><strong>发展建议：</strong><br>                1. 粮食作物：小麦、水稻、玉米（规模化机械化种植）； 2. 经济作物：大棚蔬菜、草莓、蓝莓（高收益果蔬）； 3. 特色种植：有机杂粮、中药材（绿色认证溢价）； 落地建议：配套滴灌系统，对接本地农贸市场/社区团购，利用公路优势降低运输成本。             </p>         </div>         </div>`)[0];
+                popup_0e27929ab78e1a21a149c2f1af614f3b.setContent(html_f1f9d5860cb21553b88dcf2ca8a4ce65);
+            
+        
+
+        marker_db1d47078f142faf0bb7786a44380c57.bindPopup(popup_0e27929ab78e1a21a149c2f1af614f3b)
+        ;
+
+        
+    
+    
+            marker_db1d47078f142faf0bb7786a44380c57.bindTooltip(
+                `<div>
+                     L050 - 适合种地
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_db1d47078f142faf0bb7786a44380c57.setIcon(icon_8a4207b809d62ceb0f4876a014fe4ee5);
+            
+    
+            marker_cluster_7f09a96060a9f0549aa49bb9f47576fa.addTo(map_331fd7a759bc6dffc6cb99e4b20f1252);
+        
+</script>
+</html>
